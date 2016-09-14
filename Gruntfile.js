@@ -150,7 +150,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/js/main.js': ['src/js/jquery-latest.js', 'src/js/jquery.js', 'src/js/bootstrap.js', 'src/js/jquery.easing.js', 'src/js/jquery.mixitup.js', 'src/js/scripts.js', 'src/js/jquery.magnific-popup.min.js', 'src/js/contactform.js', 'src/js/smoothscroll.js', 'src/js/classie.js', 'src/js/wow.min.js', 'src/js/main.js']
+                    '<%= yeoman.dist %>/js/main.js': ['src/js/jquery.js','src/js/jquery-latest.js', 'src/js/bootstrap.js', 'src/js/jquery.easing.js', 'src/js/jquery.mixitup.js', 'src/js/scripts.js', 'src/js/jquery.magnific-popup.min.js', 'src/js/contactform.js', 'src/js/smoothscroll.js', 'src/js/classie.js', 'src/js/wow.min.js', 'src/js/main.js', 'bower_components/angular/angular.js','src/js/app.js','src/js/controllers/emailController.js','src/js/services/emailService.js']
                 }
             }
         },
@@ -165,6 +165,10 @@ module.exports = function (grunt) {
             }
         },
         watch: {
+            bower: {
+                files: ['bower.json'],
+                tasks: ['wiredep']
+            },
             src: {
                 files: ['*.html'],
                 options: {livereload: true}
@@ -182,7 +186,7 @@ module.exports = function (grunt) {
         },
 
         connect: {
-            options:{
+            options: {
                 livereload: 35729
 
             },
@@ -192,6 +196,8 @@ module.exports = function (grunt) {
                     base: 'src/'
                 }
             },
+
+
             livereload: {
                 options: {
                     port: 9001,
@@ -219,6 +225,69 @@ module.exports = function (grunt) {
                     base: 'dist/'
                 }
             }
+        },
+        // Reads HTML for usemin blocks to enable smart builds that automatically
+        // concat, minify and revision files. Creates configurations in memory so
+        // additional tasks can operate on them
+        useminPrepare: {
+            html: '<%= yeoman.app %>/index.html',
+            options: {
+                dest: '<%= yeoman.dist %>',
+                flow: {
+                    html: {
+                        steps: {
+                            js: ['concat', 'uglifyjs'],
+                            css: ['cssmin']
+                        },
+                        post: {}
+                    }
+                }
+            }
+        },
+
+        // Performs rewrites based on filerev and the useminPrepare configuration
+        usemin: {
+            html: ['<%= yeoman.dist %>/{,*/}*.html'],
+            css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+            js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
+            options: {
+                assetsDirs: [
+                    '<%= yeoman.dist %>',
+                    '<%= yeoman.dist %>/images',
+                    '<%= yeoman.dist %>/styles'
+                ],
+                patterns: {
+                    js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
+                }
+            }
+        },
+
+
+        wiredep: {
+            app: {
+                src: ['<%= yeoman.app %>/index.html'],
+                ignorePath: /\.\.\//
+            },
+            test: {
+                devDependencies: true,
+                src: '<%= karma.unit.configFile %>',
+                ignorePath: /\.\.\//,
+                fileTypes: {
+                    js: {
+                        block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
+                        detect: {
+                            js: /'(.*\.js)'/gi
+                        },
+                        replace: {
+                            js: '\'{{filePath}}\','
+                        }
+                    }
+                }
+            },
+            sass: {
+                src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                ignorePath: /(\.\.\/){1,2}bower_components\//
+            }
         }
 
     });
@@ -227,7 +296,7 @@ module.exports = function (grunt) {
         'connect:livereload', 'watch']);
 
     grunt.registerTask('serve', "Serve your app", [
-        'connect:dist', 'livereload', 'watch']);
+        'connect:dist', 'watch']);
 
     grunt.registerTask('build', [
         'clean:dist',

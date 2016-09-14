@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../ico/favicon.ico">
+    <link rel="shortcut icon" href="images/portrait.jpg">
     <!-- PAGE TITLE & CSS FILES=========== -->
     <title>Tesla Onepage Personal/Portofolio</title>
+    <!-- bower:css -->
+    <!-- endbower -->
     <!-- build:css(.) styles/vendor.css -->
 
     <!-- Bootstrap core CSS -->
@@ -38,7 +40,7 @@
 </head>
 
 <!-- BODY START=========== -->
-<body data-spy="scroll" data-target=".navigation">
+<body ng-app="yoApp" data-spy="scroll" data-target=".navigation">
 <div class="page-wrapper">
 
     <!-- Preloader -->
@@ -75,8 +77,10 @@
 
                             <div class="introContent">
                                 <div class="introHeading">
-                                    <h1 class="wow fadeinDown">I'm ANDERSON HELLS</h1>
-                                    <div class="introTags wow zoomIn">Freelancer. Designer. Web developer.</div>
+                                    <h1 class="wow fadeinDown">I'm ADAM LUPTAK</h1>
+                                    <div class="introTags wow zoomIn">Application developer. automation engineer.
+                                        musician.
+                                    </div>
                                 </div>
 
                                 <a class="easing scroll-down" href="#sectionAbout">
@@ -98,7 +102,7 @@
         <!-- section ABOUT -->
         <section id="sectionAbout">
 
-            <div class="container">
+            <div id="scroll-to" class="container">
 
                 <!-- section TITLE -->
                 <div class="sectionTitle wow fadeInUp">
@@ -113,50 +117,53 @@
                     <p>
 
                       <span class="textBlue">
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                      My name is Adam Luptak I'm creative and enthusiastic about software development and everything related to information technologies. On the other hand, I'm musician who loves to create music and i"m playing guitar in couple bands.
                       </span>
 
                         <br><br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-
+                        I'm interest in developing new designs and concepts.
+                        I'm a great team player and I'm able to adapt to multicultural environment and provide
+                        high-quality work.
                     </p>
                 </div>
 
                 <div class="col-md-4 aboutMe aboutProfile wow fadeInUp">
 
                     <h1>Profile</h1>
-                    <img class="profileAv" src="images/avatar.jpg" alt="">
-                    <h3>Anderson Hells</h3>
-                    <h4>Freelancer</h4>
+                    <img class="profileAv" src="images/portrait.jpg" alt="">
+                    <h3>Adam Luptak</h3>
+                    <h4>Application Developer</h4>
 
                     <div class="profileInfo">
                         <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                            Work for T-systems slovakia like Junior Application Developer
+                        </p>
+
+                        <p>
+                            Work for T-systems slovakia like Junior Application Developer
                         </p>
 
                         <h5>
                             <span class="textBlue">Birthday:</span>
-                            21 JUNE 1987
+                            24 JULLY 1990
                         </h5>
 
                         <h5>
                       <span class="textBlue">
                         Phone number:</span>
-                            +(1) 234 567 89
+                            +(421) 919 328 316
                         </h5>
 
                         <h5>
                       <span class="textBlue">
                         Website:</span>
-                            www.andersonhells.com
+                            www.adamluptakosice.tk
                         </h5>
 
                         <h5>
                       <span class="textBlue">
                         E-mail:</span>
-                            andersonhells@domain.com
+                            adamluptakosice@gmail.com
                         </h5>
 
                     </div>
@@ -165,37 +172,41 @@
                 <div class="col-md-4 aboutMe aboutSkills wow fadeInUp">
                     <h1>Skills</h1>
 
-                    <h4>HTML5 & CSS3</h4>
+                    <h4>Java, Java2EE, Spring</h4>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                             aria-valuemax="100" style="width: 85%;">
+                             aria-valuemax="100" style="width: 0%;">
                             85%
                         </div>
                     </div>
 
-                    <h4>Javascript & jQuery</h4>
+                    <h4>Android development</h4>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                             aria-valuemax="100" style="width: 70%;">
+                             aria-valuemax="100" style="width: 0%;">
                             70%
                         </div>
                     </div>
 
-                    <h4>Photoshop</h4>
+                    <h4>Web development, Angular js, HTML, CSS etc.</h4>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                             aria-valuemax="100" style="width: 90%;">
+                             aria-valuemax="100" style="width: 0%;">
                             90%
                         </div>
                     </div>
 
-                    <h4>PHP</h4>
+                    <h4>Electronics,MCU, Arduino, Raspberry pi</h4>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                             aria-valuemax="100" style="width: 60%;">
+                             aria-valuemax="100" style="width: 0%;">
                             60%
                         </div>
                     </div>
+                    <form method="get" action="doc/AdamLuptakCV.pdf">
+                        <input type="submit" class="submit resume" value="Get Resume"
+                               style="background: transparent;color: #565756;"/>
+                    </form>
 
                 </div>
 
@@ -232,12 +243,21 @@
                         <li>
                             <div class="icon icon-basic-notebook"></div>
                             <h4>
-                                <i class="resumePeriod">2012</i>
-                                Front-end developer exam
+                                <i class="resumePeriod">2015</i>
+                                Master’s Degree in Cybernetics</h4>
+                            <i class="resumeName">@ passed</i>
+                            <p>Technical university at Kosice, Study automation and developing control algorithms for technological process control.
+                            </p>
+                        </li>
+
+                        <li>
+                            <div class="icon icon-basic-notebook"></div>
+                            <h4>
+                                <i class="resumePeriod">2013</i>
+                                Private music conservatorium
                             </h4>
                             <i class="resumeName">@ passed</i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat.
+                            <p>Music theory, main: instrument Guitar, second: instrument piano.
                             </p>
                         </li>
 
@@ -245,23 +265,10 @@
                             <div class="icon icon-basic-notebook"></div>
                             <h4>
                                 <i class="resumePeriod">2012</i>
-                                Front-end developer exam
+                                T-System Summer University
                             </h4>
                             <i class="resumeName">@ passed</i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat.
-                            </p>
-                        </li>
-
-                        <li>
-                            <div class="icon icon-basic-notebook"></div>
-                            <h4>
-                                <i class="resumePeriod">2012</i>
-                                Front-end developer exam
-                            </h4>
-                            <i class="resumeName">@ passed</i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat.
+                            <p>Summer University focus on LINUX OS Certificate
                             </p>
                         </li>
 
@@ -277,12 +284,12 @@
                         <li>
                             <div class="icon icon-basic-case"></div>
                             <h4>
-                                Front-end developer exam
-                                <i class="resumePeriod">2012</i>
+                                <i class="resumePeriod">2015</i>
+                                Junior Application Developer
                             </h4>
-                            <i class="resumeName">@ passed</i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat.
+                            <i class="resumeName">@ current</i>
+                            <p>T-Systems Slovakia, s.r.o..Košice Develop application in various programming languages
+                                live Java, ASP.Net or C# based on requirements of internal or external customers.
                             </p>
                         </li>
 
@@ -290,12 +297,10 @@
                         <li>
                             <div class="icon icon-basic-case"></div>
                             <h4>
-                                Front-end developer exam
-                                <i class="resumePeriod">2012</i>
+                                Guitar teacher <i class="resumePeriod">2013</i>
                             </h4>
                             <i class="resumeName">@ passed</i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat.
+                            <p>Základná umelecká škola Krompachy - guitar teacher.
                             </p>
                         </li>
 
@@ -303,12 +308,15 @@
                         <li>
                             <div class="icon icon-basic-case"></div>
                             <h4>
-                                Front-end developer exam
-                                <i class="resumePeriod">2012</i>
+                                Guitar teacher
+                                <i class="resumePeriod">2013</i>
                             </h4>
                             <i class="resumeName">@ passed</i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat.
+                            <p>SZUS umelecká škola
+                                Margecany - guitar teacher.
+                                </br>
+                                </br>
+
                             </p>
                         </li>
 
@@ -345,27 +353,26 @@
 
                         <ul class="worksFilters">
                             <li class="filter" data-filter="all">All</li>
-                            <li class="filter" data-filter=".worksCateg1">First category</li>
-                            <li class="filter" data-filter=".worksCateg2">Second category</li>
+                            <li class="filter" data-filter=".worksCateg1">Computer Applications</li>
+                            <li class="filter" data-filter=".worksCateg2">Automation</li>
                         </ul>
 
                     </div>
 
                     <!--GRID ITEMS-->
 
-                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg1">
+                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg2">
 
-                        <img src="images/works/p1.jpg" alt="">
-
+                        <img src="images/works/temp.jpg" alt="">
                         <div class="itemCaption">
 
                             <div class="capContent">
 
-                                <h3>Project title here</h3>
+                                <h3>Temperature regulator for tech. proces ECAP</h3>
 
-                                <p>Branding, Illustration</p>
+                                <p>Final Thesis</p>
 
-                                <a class="capPreview image-modal" href="#image-modal1">
+                                <a class="capPreview image-modal " href="#image-modal1">
                                     Preview
                                 </a>
 
@@ -375,15 +382,24 @@
 
                         <div id="image-modal1" class="mfp-hide modal-box">
 
-                            <img src="images/works/p1.jpg" alt="">
+                            <img src="images/works/temp.jpg" alt="">
 
                             <div class="modal-box-content">
 
-                                <h2>Project title here</h2>
+                                <h2>Temperature regulator for tech. proces ECAP</h2>
 
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat. </p>
+                                <p>During the collage I have been working for 4 years on my final Master Thesis which
+                                    was focused on developing the temperature
+                                    regulator for technological process, called ECAP. With this Thesis I won the first
+                                    place on state final exams and
+                                    I was awarded for the best Thesis</p>
+                                <h2>Experience with:</h2>
+                                <ul>
+                                    <li>C# windows form application</li>
+                                    <li>C++ MCU (Arduino) platform</li>
+                                    <li>CAD - NI Ultiboard and Multisim</li>
+                                    <li>HW & SF solution and design</li>
+                                </ul>
 
                             </div>
 
@@ -394,15 +410,15 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg2">
 
-                        <img src="images/works/p2.jpg" alt="">
+                        <img src="images/works/home.jpg" alt="">
 
                         <div class="itemCaption">
 
                             <div class="capContent">
 
-                                <h3>Project title here</h3>
+                                <h3>Factory automation control system</h3>
 
-                                <p>Branding, Illustration</p>
+                                <p>Factory automation control system</p>
 
                                 <a class="capPreview image-modal" href="#image-modal2">
                                     Preview
@@ -414,16 +430,25 @@
 
                         <div id="image-modal2" class="mfp-hide modal-box">
 
-                            <img src="images/works/p2.jpg" alt="">
+                            <img src="images/works/home.jpg" alt="">
 
                             <div class="modal-box-content">
 
-                                <h2>Project title here</h2>
+                                <h2>Factory automation control system</h2>
 
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat. </p>
-
+                                <p>Factory automation system for controlling production hall, street lights, measuring
+                                    water level in water tank, measuring current. Use arduino with raspberry pi and
+                                    standard automation sensors.</p>
+                                <h2>Experience with:</h2>
+                                <ul>
+                                    <li>PHP</li>
+                                    <li>Javascript, Html, Css</li>
+                                    <li>Linux administration of server</li>
+                                    <li>Mysql database</li>
+                                    <li>Arduino programing multiple sensors ethernet communication between parts of
+                                        system
+                                    </li>
+                                </ul>
                             </div>
 
                         </div>
@@ -431,17 +456,17 @@
                     </div>
 
 
-                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg2">
+                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg1">
 
-                        <img src="images/works/p1.jpg" alt="">
+                        <img src="images/works/admin.jpg" alt="">
 
                         <div class="itemCaption">
 
                             <div class="capContent">
 
-                                <h3>Project title here</h3>
+                                <h3>Incident Admin</h3>
 
-                                <p>Branding, Illustration</p>
+                                <p>Application for task scheduling</p>
 
                                 <a class="capPreview image-modal" href="#image-modal3">
                                     Preview
@@ -453,17 +478,22 @@
 
                         <div id="image-modal3" class="mfp-hide modal-box">
 
-                            <img src="images/works/p1.jpg" alt="">
+                            <img src="images/works/admin.jpg" alt="">
 
                             <div class="modal-box-content">
 
-                                <h2>Project title here</h2>
+                                <h2>Incident Admin</h2>
 
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat. </p>
-
+                                <p>Big application based on OSGI backend framework and Angular JS frontend
+                                    main purpose of application was scheduling tasks for users and etc.</p>
+                                <h2>Experience with:</h2>
+                                <ul>
+                                    <li>Java (REST, Hibernet, OSGI etc.)</li>
+                                    <li>AngularJS (Bower, Grunt etc.)</li>
+                                    <li>Oracle database</li>
+                                </ul>
                             </div>
+
 
                         </div>
 
@@ -472,15 +502,15 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg1">
 
-                        <img src="images/works/p2.jpg" alt="">
+                        <img src="images/works/android.jpg" alt="">
 
                         <div class="itemCaption">
 
                             <div class="capContent">
 
-                                <h3>Project title here</h3>
+                                <h3>Wortime manager</h3>
 
-                                <p>Branding, Illustration</p>
+                                <p>Application form monitoring of worked time</p>
 
                                 <a class="capPreview image-modal" href="#image-modal4">
                                     Preview
@@ -492,16 +522,20 @@
 
                         <div id="image-modal4" class="mfp-hide modal-box">
 
-                            <img src="images/works/p2.jpg" alt="">
+                            <img src="images/works/android.jpg" alt="">
 
                             <div class="modal-box-content">
 
-                                <h2>Project title here</h2>
+                                <h2>Worktime manager</h2>
 
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat. </p>
-
+                                <p>Android application which monitor user when he is in job and when he left, how many
+                                    hours he worked and if he has overtime. Place of Workplace can be setup with GPS
+                                    location
+                                    with automatic save incoming and leave time </p>
+                                <h2>Experience with:</h2>
+                                <ul>
+                                    <li>Android (Sugar ORM, Dagger 2, Sqlite etc.)</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -509,19 +543,20 @@
                     </div>
 
 
-                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg2">
+                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem worksCateg1">
 
-                        <img src="images/works/p1.jpg" alt="">
+                        <img src="images/works/rmc.jpg" alt="">
 
                         <div class="itemCaption">
 
                             <div class="capContent">
 
-                                <h3>Project title here</h3>
+                                <h3>Internal application</h3>
 
-                                <p>Branding, Illustration</p>
+                                <p>Application provides credit check of a
+                                    person based on business defined rules </p>
 
-                                <a class="capPreview image-modal" href="#image-modal2">
+                                <a class="capPreview image-modal" href="#image-modal5">
                                     Preview
                                 </a>
 
@@ -531,16 +566,19 @@
 
                         <div id="image-modal5" class="mfp-hide modal-box">
 
-                            <img src="images/works/p1.jpg" alt="">
+                            <img src="images/works/rmc.jpg" alt="">
 
                             <div class="modal-box-content">
 
-                                <h2>Project title here</h2>
+                                <h2>Internal application</h2>
 
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat. </p>
-
+                                <p>As part of Scrum team I develop a Java application which provides credit check of a
+                                    person based on business defined rules </p>
+                                <h2>Experience with:</h2>
+                                <ul>
+                                    <li>Java (REST,Spring, OSGI etc.)</li>
+                                    <li>Postgres DB</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -556,11 +594,11 @@
 
                             <div class="capContent">
 
-                                <h3>Project title here</h3>
+                                <h3>Maybe Your next project</h3>
 
-                                <p>Branding, Illustration</p>
+                                <p>Maybe Your next project</p>
 
-                                <a class="capPreview image-modal" href="#image-modal3">
+                                <a class="capPreview image-modal" href="#image-modal6">
                                     Preview
                                 </a>
 
@@ -574,11 +612,9 @@
 
                             <div class="modal-box-content">
 
-                                <h2>Project title here</h2>
+                                <h2>Maybe Your next project</h2>
 
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat. </p>
+                                <p>Maybe Your next project</p>
 
                             </div>
 
@@ -618,16 +654,14 @@
                             <div class="icon icon-basic-lightbulb"></div>
                             <h3>Idea</h3>
                             <span class="servicesColor">think of it</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut consequat. </p>
+                            <p>Design project based on customer requirements </p>
                         </div>
 
                         <div class="col-md-3 col-sm-6 col-xs-6 servicesBox">
                             <div class="icon icon-basic-pencil-ruler-pen"></div>
                             <h3>Sketch</h3>
                             <span class="servicesColor">draw it</span>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. </p>
+                            <p>Sketch high level design of solution for your problem in different ways</p>
                         </div>
 
 
@@ -635,16 +669,14 @@
                             <div class="icon icon-basic-pencil-ruler"></div>
                             <h3>Design</h3>
                             <span class="servicesColor">style it</span>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                voluptatum.</p>
+                            <p>Desing solution for many difficult problems and use cases</p>
                         </div>
 
                         <div class="col-md-3 col-sm-6 col-xs-6 servicesBox">
                             <div class="icon icon-basic-webpage-txt"></div>
                             <h3>Coding</h3>
                             <span class="servicesColor">build it</span>
-                            <p>Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-                                cupiditate.</p>
+                            <p>Develop + Test + Deploy and Run</p>
                         </div>
 
                     </div>
@@ -659,38 +691,38 @@
 
         <!--section STATISTICS -->
 
-        <section id="sectionStats">
+        <section class="inspire, parallax-section" id="sectionStats">
 
-            <div class="container wow fadeInLeft">
+            <div class="container wow fadeInLeft parallax-content">
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <h3>21+</h3>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <h3>10+</h3>
                     <h5>projects done</h5>
                 </div>
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="icon icon-basic-anticlockwise"></div>
                     <h5>Punctual</h5>
                 </div>
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <h3>76+</h3>
-                    <h5>happy clients</h5>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <h3>100%</h3>
+                    <h5>get-up-and-go</h5>
                 </div>
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="icon icon-basic-cup"></div>
                     <h5>competitive</h5>
                 </div>
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-2 col-sm-6 col-xs-12">
                     <h3>200+</h3>
                     <h5>coffee cups</h5>
                 </div>
 
-                <div class="col-md-2 col-sm-4 col-xs-6 col-md-2-last">
-                    <div class="icon icon-basic-photo"></div>
-                    <h5>photographer</h5>
+                <div class="col-md-2 col-sm-6 col-xs-12 col-md-2-last">
+                    <div class="icon icon-basic-share"></div>
+                    <h5>share</h5>
                 </div>
 
             </div>
@@ -699,16 +731,14 @@
 
         <!--END section STATISTICS -->
 
-
-        <!--section CONTACT -->
-        <section id="sectionContact">
+        <section id="sectionContact" ng-controller="EmailController as mail">
 
             <div class="container">
 
                 <!-- section TITLE -->
                 <div class="sectionTitle wow fadeInUp">
                     <h1>Contact</h1>
-                    <h4>Get in touch with me</h4>
+                    <h4>Get in touch with me {{ mail.greeting }} </h4>
                     <hr>
                 </div>
                 <!-- END section TITLE -->
@@ -717,38 +747,61 @@
                 <div class="col-md-6 contactLeft  wow fadeInUp">
                     <!-- contact FORM-->
 
-                    <div class="contactForm">
+                    <div class="contactForm-mail">
 
                         <!--MESSAGE SENT SUCCESFULLY-->
                         <div id="message"></div>
 
                         <!--MAIN FORM-->
 
-                        <form method="post" action="contact.php" name="contactform" id="contactform">
+                        <form name="contactDataForm" novalidate id="contactform">
 
                             <fieldset>
 
                                 <div>
-                                    <input name="name" type="text" id="name" placeholder="Name* :" size="30" value=""/>
+                                    <input name="name" type="text" id="name" placeholder="Name* :" size="30"
+                                           ng-model="UserName.name" required/>
+                                    <span style="color:red"
+                                          ng-show="contactDataForm.name.$dirty && contactDataForm.name.$invalid">
+                                    <span ng-show="contactDataForm.name.$error.required">Username is required.</span></span>
                                 </div>
 
                                 <div>
-                                    <input name="email" type="text" id="email" placeholder="E-mail* :" size="30"
-                                           value=""/>
+                                    <input name="email" type="email" id="email" placeholder="E-mail* :" size="30"
+                                           ng-model="email" required/>
+                                    <span style="color:red"
+                                          ng-show="contactDataForm.email.$dirty && contactDataForm.email.$invalid"><span
+                                            ng-show="contactDataForm.email.$error.required">Email is required.</span><span
+                                            ng-show="contactDataForm.email.$error.email">Invalid email address.</span></span>
                                 </div>
 
                                 <div>
                                     <input name="subject" type="text" id="subject" placeholder="Subject* :" size="30"
-                                           value=""/>
+                                           value="" ng-model="subject" required/>
+                                    <span style="color:red"
+                                          ng-show="contactDataForm.subject.$dirty && contactDataForm.subject.$invalid">
+                                    <span ng-show="contactDataForm.subject.$error.required">Subject is required.</span></span>
                                 </div>
 
                                 <div>
-                                    <textarea name="comments" cols="40" rows="3" placeholder="Message* :"
-                                              id="comments"></textarea>
+                                    <textarea ng-maxlength="25" maxlength="26" name="comments" cols="40" rows="3"
+                                              placeholder="Message* :"
+                                              id="comments" ng-model="comments" required/></textarea>
+                                    <span style="color:red"
+                                          ng-show="contactDataForm.comments.$dirty && contactDataForm.comments.$invalid">
+                                    <span ng-show="contactDataForm.comments.$error.required">Comments is required.</span>
+                                    <span class="error" ng-show="contactDataForm.comments.$error.maxlength">
+                                     Reached limit!
+                                    </span>
+                                    </span>
+
                                 </div>
 
-                                <input type="submit" class="submit" id="submit" value="Send message"/>
+                                <!--<input type="submit" class="submit" id="submit" value="Send message"/>-->
 
+                                <input type="submit" ng-click="mail.sendEmail(contactDataForm)" class="submit"
+                                       id="submit" ng-disabled="contactDataForm.$invalid"
+                                       value="Send message"/>
                             </fieldset>
 
                         </form>
@@ -764,19 +817,19 @@
                     <div class="contactBox">
                         <div class="icon icon-basic-geolocalize-05"></div>
                         <h3>Adress/Street</h3>
-                        <p>Nr. 6, 21 Awesome Street, London, UK</p>
+                        <p>Belehradska 12 , 04013 Kosice, Slovakia</p>
                     </div>
 
                     <div class="contactBox">
                         <div class="icon icon-basic-smartphone"></div>
                         <h3>Phone number</h3>
-                        <p>+(123) 456 789 </p>
+                        <p>+(421) 919 328 316 </p>
                     </div>
 
                     <div class="contactBox">
                         <div class="icon icon-basic-world"></div>
                         <h3>Website</h3>
-                        <p>andersonhells.com</p>
+                        <p>aadamluptakosice.tk</p>
                     </div>
 
 
@@ -793,12 +846,12 @@
 
                     <!-- COPYRIGHT-->
                     <div class="col-md-6 col-sm-6 col-xs-12 footerLeft">
-                        © sandthemes 2014 All rights reserved.
+                        © Adam Luptak 2016 All rights reserved.
                     </div>
 
                     <!-- SOCIAL ICONS -->
                     <div class="col-md-6 col-sm-6 col-xs-12 footerRight">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/adam.luptak.39"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -811,11 +864,124 @@
             <!-- END footer CONTACT-->
 
         </section>
+        <!--section CONTACT -->
+        <!--<section id="sectionContact">-->
+
+        <!--<div class="container">-->
+
+        <!--&lt;!&ndash; section TITLE &ndash;&gt;-->
+        <!--<div class="sectionTitle wow fadeInUp">-->
+        <!--<h1>Contact</h1>-->
+        <!--<h4>Get in touch with me</h4>-->
+        <!--<hr>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; END section TITLE &ndash;&gt;-->
+
+
+        <!--<div class="col-md-6 contactLeft  wow fadeInUp">-->
+        <!--&lt;!&ndash; contact FORM&ndash;&gt;-->
+
+        <!--<div class="contactForm">-->
+
+        <!--&lt;!&ndash;MESSAGE SENT SUCCESFULLY&ndash;&gt;-->
+        <!--<div id="message"></div>-->
+
+        <!--&lt;!&ndash;MAIN FORM&ndash;&gt;-->
+
+        <!--<form method="post" action="contact.php" name="contactform" id="contactform">-->
+
+        <!--<fieldset>-->
+
+        <!--<div>-->
+        <!--<input name="name" type="text" id="name" placeholder="Name* :" size="30" value=""/>-->
+        <!--</div>-->
+
+        <!--<div>-->
+        <!--<input name="email" type="text" id="email" placeholder="E-mail* :" size="30"-->
+        <!--value=""/>-->
+        <!--</div>-->
+
+        <!--<div>-->
+        <!--<input name="subject" type="text" id="subject" placeholder="Subject* :" size="30"-->
+        <!--value=""/>-->
+        <!--</div>-->
+
+        <!--<div>-->
+        <!--<textarea name="comments" cols="40" rows="3" placeholder="Message* :"-->
+        <!--id="comments"></textarea>-->
+        <!--</div>-->
+
+        <!--<input type="submit" class="submit" id="submit" value="Send message"/>-->
+
+        <!--</fieldset>-->
+
+        <!--</form>-->
+        <!--&lt;!&ndash;END Main form&ndash;&gt;-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash; END contact FORM&ndash;&gt;-->
+
+        <!--</div>-->
+
+        <!--<div class="col-md-6 contactRight  wow fadeInUp">-->
+
+        <!--<div class="contactBox">-->
+        <!--<div class="icon icon-basic-geolocalize-05"></div>-->
+        <!--<h3>Adress/Street</h3>-->
+        <!--<p>Nr. 6, 21 Awesome Street, London, UK</p>-->
+        <!--</div>-->
+
+        <!--<div class="contactBox">-->
+        <!--<div class="icon icon-basic-smartphone"></div>-->
+        <!--<h3>Phone number</h3>-->
+        <!--<p>+(123) 456 789 </p>-->
+        <!--</div>-->
+
+        <!--<div class="contactBox">-->
+        <!--<div class="icon icon-basic-world"></div>-->
+        <!--<h3>Website</h3>-->
+        <!--<p>andersonhells.com</p>-->
+        <!--</div>-->
+
+
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash; END container &ndash;&gt;-->
+
+
+        <!--&lt;!&ndash; footer CONTACT&ndash;&gt;-->
+        <!--<footer class="contactFooter">-->
+
+        <!--<div class="container">-->
+
+        <!--&lt;!&ndash; COPYRIGHT&ndash;&gt;-->
+        <!--<div class="col-md-6 col-sm-6 col-xs-12 footerLeft">-->
+        <!--© sandthemes 2014 All rights reserved.-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; SOCIAL ICONS &ndash;&gt;-->
+        <!--<div class="col-md-6 col-sm-6 col-xs-12 footerRight">-->
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+        <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+        <!--<a href="#"><i class="fa fa-instagram"></i></a>-->
+        <!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash; END container&ndash;&gt;-->
+
+        <!--</footer>-->
+        <!--&lt;!&ndash; END footer CONTACT&ndash;&gt;-->
+
+        <!--</section>-->
         <!--END section CONTACT -->
 
     </div>
 </div>
 <!-- JAVASCRIPTS=========== -->
+
+
 <!--Main JS Library-->
 <script src="js/main.js"></script>
 
