@@ -15,7 +15,7 @@ function emailService($http) {
         console.log(contactData);
         $http({
             method: 'Post',
-            url: 'src/doc/send_form_email.php',
+            url: 'doc/send_form_email.php',
             data: $.param({
                 first_name: contactData.name.$viewValue,
                 email: contactData.email.$viewValue,
