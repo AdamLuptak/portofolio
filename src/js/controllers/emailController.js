@@ -13,11 +13,9 @@ angular
 
 function EmailController(emailService) {
     var vm = this;
+
     vm.sendEmail = function (contactData) {
         emailService.sendEmail(contactData);
-        vm.project = {};
-        vm.contactDataForm.$setPristine();
-        vm.contactDataForm.$setUntouched();
     }
 }
 

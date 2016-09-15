@@ -1,4 +1,3 @@
-
 'use strict';
 
 angular
@@ -25,10 +24,10 @@ function emailService($http) {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 
         }).then(function successCallback(response) {
-           // alert("Thank you for contacting us. I will be in touch with you very soon.");
-            console.log("OK");
+            alert("Thank you for contacting us. I will be in touch with you very soon.");
         }, function errorCallback(response) {
             alert('An error has occurred!')
+            location.reload(true);
         });
     }
 }
