@@ -25,7 +25,8 @@ function emailService($http) {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 
         }).then(function successCallback(response) {
-            alert("Thank you for contacting us. I will be in touch with you very soon.");
+           // alert("Thank you for contacting us. I will be in touch with you very soon.");
+            console.log("OK");
         }, function errorCallback(response) {
             alert('An error has occurred!')
         });

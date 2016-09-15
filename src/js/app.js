@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-    .module('yoApp', []);
+    .module('yoApp',[]);
 
 
 
