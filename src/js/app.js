@@ -9,7 +9,17 @@
  * Main module of the application.
  */
 angular
-    .module('yoApp',[]);
+    .module('yoApp', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: '/',
+            controller: 'EmailController'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+
+}]);
 
 
 
