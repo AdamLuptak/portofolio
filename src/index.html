@@ -920,7 +920,7 @@
             var form_data = $(this).serialize();
             $.ajax({
                 type: "POST",
-                url: "src/doc/email.php",
+                url: "doc/email.php",
                 dataType: "json", // Add datatype
                 data: form_data
             }).done(function (data) {
