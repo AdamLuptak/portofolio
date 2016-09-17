@@ -738,7 +738,7 @@ a.scroll-down div {
 }
 
 /* ====GENERAL FORM STYLES==== */
-input, textarea, select {
+input, textarea, select{
     color: #222;
     background: transparent;
     vertical-align: top;
@@ -755,7 +755,6 @@ input, textarea, select {
     font-weight: 400;
     letter-spacing: 2px;
 }
-
 input:focus, textarea:focus, select:focus {
     outline: none;
     position: relative;

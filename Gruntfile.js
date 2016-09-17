@@ -150,7 +150,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/js/main.js': ['src/js/jquery.js','src/js/jquery-latest.js', 'src/js/bootstrap.js', 'src/js/jquery.easing.js', 'src/js/jquery.mixitup.js', 'src/js/scripts.js', 'src/js/jquery.magnific-popup.min.js', 'src/js/contactform.js', 'src/js/smoothscroll.js', 'src/js/classie.js', 'src/js/wow.min.js', 'src/js/main.js', 'bower_components/angular/angular.js','bower_components/angular-route/angular-route.js','src/js/app.js','src/js/controllers/emailController.js','src/js/services/emailService.js']
+                    '<%= yeoman.dist %>/js/main.js': ['src/js/jquery.js','src/js/jquery-latest.js', 'src/js/bootstrap.js', 'src/js/jquery.easing.js', 'src/js/jquery.mixitup.js', 'src/js/scripts.js', 'src/js/jquery.magnific-popup.min.js', 'src/js/contactform.js', 'src/js/smoothscroll.js', 'src/js/classie.js', 'src/js/wow.min.js', 'src/js/main.js', 'bower_components/angular/angular.js','bower_components/angular-route/angular-route.js','bower_components/bootstrap-validator/dist/validator.js','src/js/app.js','src/js/controllers/emailController.js','src/js/services/emailService.js']
                 }
             }
         },

@@ -37,6 +37,27 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .form-control {
+            color: #222;
+            background: transparent;
+            vertical-align: top;
+            transition: all 0.25s ease-in-out;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            margin: 0;
+            padding: 15px;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            border-radius: 0px;
+        }
+
+    </style>
 </head>
 
 <!-- BODY START=========== -->
@@ -754,58 +775,35 @@
                         <div id="message"></div>
 
                         <!--MAIN FORM-->
+                        <form name="freeCall" method="post" class="popover-form" id="free-call-form" data-toggle="validator" role="form">
+                            <div class="form-group">
+                                <label for="inputName" class="control-label hidden">Name</label>
+                                <input name="inputName" type="text" class="form-control" id="inputName" placeholder="Name* :" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName" class="control-label hidden">Name</label>
+                                <input name="subject" type="text" class="form-control" id="email-subject" placeholder="Subject* :"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="control-label hidden">Email</label>
+                                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="E-mail* :"
+                                       data-error="Bruh, that email address is invalid" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName" class="control-label hidden">Name</label>
 
-                        <form name="contactDataForm" novalidate id="contactform">
-
-                            <fieldset>
-
-                                <div>
-                                    <input name="name" type="text" id="name" placeholder="Name* :" size="30"
-                                           ng-model="UserName.name" required/>
-                                    <span style="color:red"
-                                          ng-show="contactDataForm.name.$dirty && contactDataForm.name.$invalid">
-                                    <span ng-show="contactDataForm.name.$error.required">Username is required.</span></span>
-                                </div>
-
-                                <div>
-                                    <input name="email" type="email" id="email" placeholder="E-mail* :" size="30"
-                                           ng-model="email" required/>
-                                    <span style="color:red"
-                                          ng-show="contactDataForm.email.$dirty && contactDataForm.email.$invalid"><span
-                                            ng-show="contactDataForm.email.$error.required">Email is required.</span><span
-                                            ng-show="contactDataForm.email.$error.email">Invalid email address.</span></span>
-                                </div>
-
-                                <div>
-                                    <input name="subject" type="text" id="subject" placeholder="Subject* :" size="30"
-                                           value="" ng-model="subject" required/>
-                                    <span style="color:red"
-                                          ng-show="contactDataForm.subject.$dirty && contactDataForm.subject.$invalid">
-                                    <span ng-show="contactDataForm.subject.$error.required">Subject is required.</span></span>
-                                </div>
-
-                                <div>
-                                    <textarea ng-maxlength="25" maxlength="26" name="comments" cols="40" rows="3"
-                                              placeholder="Message* :"
-                                              id="comments" ng-model="comments" required/></textarea>
-                                    <span style="color:red"
-                                          ng-show="contactDataForm.comments.$dirty && contactDataForm.comments.$invalid">
-                                    <span ng-show="contactDataForm.comments.$error.required">Comments is required.</span>
-                                    <span class="error" ng-show="contactDataForm.comments.$error.maxlength">
-                                     Reached limit!
-                                    </span>
-                                    </span>
-
-                                </div>
-
-                                <!--<input type="submit" class="submit" id="submit" value="Send message"/>-->
-
-                                <input type="submit" ng-click="mail.sendEmail(contactDataForm)" class="submit"
-                                       id="submit" ng-disabled="contactDataForm.$invalid"
-                                       value="Send message"/>
-                            </fieldset>
-
+                                <textarea maxlength="26" name="comments" cols="40" rows="3"
+                                          placeholder="Message* :" class="form-control"
+                                          id="comments" required/></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" id=" submit" class="submit btn " value="Send message"/>
+                            </div>
                         </form>
+
+
                         <!--END Main form-->
 
                     </div>
@@ -830,7 +828,7 @@
                     <div class="contactBox">
                         <div class="icon icon-basic-world"></div>
                         <h3>Website</h3>
-                        <p>aadamluptakosice.tk</p>
+                        <p>adamluptakosice.tk</p>
                     </div>
 
 
@@ -838,14 +836,16 @@
 
             </div>
             <!-- END container -->
-            <form name="freeCall" method="post" class="popover-form" id="free-call-form">
-                <label for="name1">Name</label><span class="pull-right close">&times;</span><input placeholder="Name"
-                                                                                                   name="call-name"
-                                                                                                   type="text"
-                                                                                                   id="name1">
-                <label for="phone">Phonenumber</label><input name="phone" type="text" value="" placeholder="+375"
-                                                             id="phone">
-                <input type="submit" value="Call me back">
+
+
+            <!--<form name="freeCall" method="post" class="popover-form" id="free-call-form">-->
+                <!--<label for="name1">Name</label><span class="pull-right close">&times;</span><input placeholder="Name"-->
+                                                                                                   <!--name="call-name"-->
+                                                                                                   <!--type="text"-->
+                                                                                                   <!--id="name1">-->
+                <!--<label for="phone">Phonenumber</label><input name="phone" type="text" value="" placeholder="+375"-->
+                                                             <!--id="phone">-->
+                <!--<input type="submit" value="Call me back">-->
 
                 <!-- footer CONTACT-->
                 <footer class="contactFooter">
@@ -883,6 +883,7 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/bootstrap-validator/dist/validator.js"></script>
 <!-- endbower -->
 
 <script src="js/jquery-latest.js" type="text/javascript"></script>
@@ -919,7 +920,7 @@
             var form_data = $(this).serialize();
             $.ajax({
                 type: "POST",
-                url: "http://localhost/email/email.php",
+                url: "src/doc/email.php",
                 dataType: "json", // Add datatype
                 data: form_data
             }).done(function (data) {
