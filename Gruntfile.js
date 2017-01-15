@@ -23,8 +23,7 @@ module.exports = function (grunt) {
         // this way we can use things like name and version (pkg.name)
         pkg: grunt.file.readJSON('package.json'),
         yeoman: appConfig,
-
-
+        
         // Empties folders to start fresh
         clean: {
             dist: {
